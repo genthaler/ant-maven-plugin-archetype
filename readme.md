@@ -1,6 +1,11 @@
 Maven Archetype to create an Ant-based Maven Plugin
 ====================================================
 
+Current status
+--------------
+Initial commit, no property substitution, no testing, no documentation
+I'd be surprised if it built at this stage
+
 groupId
 -------
 Now I'm being slightly rude by using the apache groupId, hopefully they'll pick this up and integrate it.
