@@ -1,0 +1,8 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<project>
+	<target name="default">
+		<echo>${symbol_dollar}{${parameter}}</echo>
+	</target>
+</project>

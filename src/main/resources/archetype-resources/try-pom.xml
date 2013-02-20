@@ -1,0 +1,42 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>${package}</groupId>
+	<artifactId>test-${artifactId}</artifactId>
+	<name>Test Example Ant Mojo - firstant-maven-plugin</name>
+	<packaging>pom</packaging>
+	<version>${version}</version>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>${package}</groupId>
+				<artifactId>${artifactId}</artifactId>
+				<version>${version}</version>
+				<executions>
+					<execution>
+						<id>try</id>
+						<goals>
+							<goal>echo</goal>
+						</goals>
+						<phase>validate</phase>
+						<configuration>
+							<message>Hello peeps</message>
+						</configuration>
+					</execution>
+					<execution>
+						<id>help</id>
+						<goals>
+							<goal>help</goal>
+						</goals>
+						<phase>validate</phase>
+						<configuration>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

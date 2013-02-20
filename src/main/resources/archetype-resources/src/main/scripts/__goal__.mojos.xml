@@ -1,0 +1,23 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<pluginMetadata>
+	<mojos>
+		<mojo>
+			<goal>${goal}</goal>
+			<call>default</call>
+			<description>${goalDescription}</description>
+			<parameters>
+				<parameter>
+					<name>${parameter}</name>
+					<property>${parameter}</property>
+					<required>false</required>
+					<expression>${symbol_dollar}{${parameter}}</expression>
+					<type>java.lang.Object</type>
+					<defaultValue>${parameterDefaultValue}</defaultValue>
+					<description>${parameterDescription}</description>
+				</parameter>
+			</parameters>
+		</mojo>
+	</mojos>
+</pluginMetadata>
