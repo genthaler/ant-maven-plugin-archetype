@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.apache.maven.archetypes</groupId>
 	<artifactId>ant-based-maven-plugin-archetype</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>maven-archetype</packaging>
 	<name>ant-based-maven-plugin-archetype</name>
+	<description>ant-based-maven-plugin-archetype</description>
 	<url>http://maven.apache.org</url>
+	<inceptionYear>2001</inceptionYear>
+	<distributionManagement>
+		<site>
+			<id>website</id>
+			<url>file:///Users/bonj/Developer/Java/target/deployed-site</url>
+		</site>
+	</distributionManagement>
+	<properties>
+		<mavenInvokerPluginVersion>1.8</mavenInvokerPluginVersion>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 	<build>
 		<extensions>
 			<extension>
@@ -49,4 +60,109 @@
 			</plugin>
 		</plugins>
 	</build>
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-plugin-plugin</artifactId>
+				<reportSets>
+					<reportSet>
+						<reports>
+							<report>report</report>
+						</reports>
+					</reportSet>
+				</reportSets>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-invoker-plugin</artifactId>
+				<version>${mavenInvokerPluginVersion}</version>
+			</plugin>
+		</plugins>
+	</reporting>
+	<profiles>
+		<profile>
+			<id>reporting</id>
+			<reporting>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-invoker-plugin</artifactId>
+						<version>${mavenInvokerPluginVersion}</version>
+					</plugin>
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>l10n-maven-plugin</artifactId>
+						<version>1.0-alpha-2</version>
+						<configuration>
+							<locales>
+								<locale>de</locale>
+								<locale>fr</locale>
+								<locale>sv</locale>
+							</locales>
+						</configuration>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-changes-plugin</artifactId>
+						<version>2.5</version>
+						<reportSets>
+							<reportSet>
+								<reports>
+									<report>jira-report</report>
+								</reports>
+							</reportSet>
+						</reportSets>
+						<configuration>
+							<!-- For JIRA-report -->
+							<columnNames>Type,Key,Summary,Assignee,Status,Resolution,Fix
+								Version</columnNames>
+							<maxEntries>200</maxEntries>
+							<onlyCurrentVersion>true</onlyCurrentVersion>
+							<resolutionIds>Closed</resolutionIds>
+							<sortColumnNames>Type,Key</sortColumnNames>
+						</configuration>
+					</plugin>
+				</plugins>
+			</reporting>
+		</profile>
+		<profile>
+			<id>run-its</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-invoker-plugin</artifactId>
+						<version>${mavenInvokerPluginVersion}</version>
+						<executions>
+							<execution>
+								<id>integration-test</id>
+								<goals>
+									<goal>install</goal>
+									<goal>run</goal>
+								</goals>
+							</execution>
+						</executions>
+						<configuration>
+							<debug>${it.debug}</debug>
+							<projectsDirectory>src/it</projectsDirectory>
+							<cloneProjectsTo>${project.build.directory}/it</cloneProjectsTo>
+							<cloneClean>true</cloneClean>
+							<pomIncludes>
+								<pomInclude>*/pom.xml</pomInclude>
+							</pomIncludes>
+							<preBuildHookScript>setup</preBuildHookScript>
+							<postBuildHookScript>verify</postBuildHookScript>
+							<localRepositoryPath>${project.build.directory}/local-repo</localRepositoryPath>
+							<settingsFile>src/it/settings.xml</settingsFile>
+							<filterProperties>
+								<sitePluginVersion>3.0</sitePluginVersion>
+								<antVersion>${antVersion}</antVersion>
+							</filterProperties>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 </project>
