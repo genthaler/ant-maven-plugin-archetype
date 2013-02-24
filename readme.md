@@ -1,23 +1,23 @@
-Maven Archetype to create an Ant-based Maven Plugin
+# Maven Archetype to create an Ant-based Maven Plugin
 ====================================================
 
-Current status
+## Current status
 --------------
-Initial commit, no property substitution, no testing, no documentation
+Initial commit, no property substitution, no testing, no documentation.
 
-I'd be surprised if it built at this stage
+I'd be surprised if it built at this stage.
 
-groupId
+## groupId
 -------
-Now I'm being slightly rude by using the apache groupId, hopefully they'll pick this up and integrate it.
+Now, I'm being slightly rude by using the apache groupId, I'm doing it in the hope they'll pick this up and integrate it.
 
-artifactId
+## artifactId
 -----------
 How does it sound? I'm trying to follow the pattern of the existing Apache Maven archetypes...
 
-please comment at [the forum](https://github.com/genthaler/maven-archetype-ant-plugin/issues)
+Please comment at [the forum](https://github.com/genthaler/maven-archetype-ant-plugin/issues).
 
-Real Ant-based plugins
+## Real Ant-based plugins
 ----------------------
-Some of the integration tests will create actual usable plugins, which perhaps should also go into Central
+Some of the integration tests will create actual usable plugins, which perhaps should also go into Central.
 
