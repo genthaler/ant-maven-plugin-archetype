@@ -7,7 +7,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>${package}.it</groupId>
-  <artifactId>simple-it</artifactId>
+  <artifactId>@goalName@</artifactId>
   <version>${version}</version>
 
   <description>A simple IT verifying the basic use case.</description>
@@ -24,10 +24,10 @@
         <version>@project.version@</version>
         <executions>
           <execution>
-            <id>touch</id>
+            <id>@goalName@</id>
             <phase>validate</phase>
             <goals>
-              <goal>touch</goal>
+              <goal>@goalName@</goal>
             </goals>
           </execution>
         </executions>

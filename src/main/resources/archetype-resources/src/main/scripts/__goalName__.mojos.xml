@@ -4,8 +4,8 @@
 <pluginMetadata>
 	<mojos>
 		<mojo>
-			<goal>${goal}</goal>
-			<call>default</call>
+			<goal>${goalName}</goal>
+			<call>${goalName}</call>
 			<description>${goalDescription}</description>
 			<parameters>
 				<parameter>
@@ -13,7 +13,7 @@
 					<property>${parameter}</property>
 					<required>false</required>
 					<expression>${symbol_dollar}{${parameter}}</expression>
-					<type>java.lang.Object</type>
+					<type>${symbol_dollar}{${parameterType}}</type>
 					<defaultValue>${parameterDefaultValue}</defaultValue>
 					<description>${parameterDescription}</description>
 				</parameter>

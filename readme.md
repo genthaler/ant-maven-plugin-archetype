@@ -3,10 +3,7 @@
 
 ## Current status
 --------------
-Initial commit, no property substitution, no testing, no documentation.
-
-I'd be surprised if it built at this stage.
-
+It's building, but generation from the maven-invoker-plugin is problematic.
 ## groupId
 -------
 Now, I'm being slightly rude by using the apache groupId, I'm doing it in the hope they'll pick this up and integrate it.
@@ -19,5 +16,5 @@ Please comment at [the forum](https://github.com/genthaler/maven-archetype-ant-p
 
 ## Real Ant-based plugins
 ----------------------
-Some of the integration tests will create actual usable plugins, which perhaps should also go into Central.
+Some of the integration tests will create actual usable plugins, which perhaps should also go into Central. The first integration test is creating a touch-ant-maven-plugin.
 
