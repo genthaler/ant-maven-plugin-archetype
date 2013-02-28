@@ -5,9 +5,6 @@
 	xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<requiredProperties>
-		<requiredProperty key="goalName">
-			<defaultValue>touch</defaultValue>
-		</requiredProperty>
 		<requiredProperty key="pluginPrefix">
 			<defaultValue>touch</defaultValue>
 		</requiredProperty>
@@ -16,6 +13,21 @@
 		</requiredProperty>
 		<requiredProperty key="pluginDescription">
 			<defaultValue>Maven plugin using the Apach Ant Touch task to touch a given file</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="goalName">
+			<defaultValue>touch</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="parameter">
+			<defaultValue>file</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="parameterType">
+			<defaultValue>java.io.File</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="parameterDescription">
+			<defaultValue>File to be touched</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="parameterExpression">
+			<defaultValue>file</defaultValue>
 		</requiredProperty>
 	</requiredProperties>
 	<fileSets>
@@ -29,6 +41,8 @@
 			<directory>src/it</directory>
 			<includes>
 				<include>**/*.xml</include>
+				<include>**/*.properties</include>
+				<include>**/*.groovy</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" encoding="UTF-8">

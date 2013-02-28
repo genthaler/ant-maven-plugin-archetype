@@ -1,6 +1,10 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\\' )
+
 # A comma or space separated list of goals/phases to execute, may
 # specify an empty list to execute the default goal of the IT project
-invoker.goals.1 = org.apache.maven.plugins:${goalName}-ant-maven-plugin:0.1-SNAPSHOT:${goalName} -Dtouchfile=${project.build.directory}/touched.txt
+invoker.goals.1 = org.apache.maven.plugins:${goalName}-ant-maven-plugin:0.1-SNAPSHOT:${goalName} -D${parameterExpression}=${project.build.directory}/touched.txt
 
 # Optionally, a list of goals to run during further invocations of Maven
 #invoker.goals.2 = ${project.groupId}:${project.artifactId}:${project.version}:run
@@ -36,11 +40,11 @@ invoker.goals.1 = org.apache.maven.plugins:${goalName}-ant-maven-plugin:0.1-SNAP
 
 # An optional human friendly name for this build job to be included in the build reports.
 # Since plugin version 1.4
-invoker.name = Touch Ant Plugin
+invoker.name = ${pluginName}
 
 # An optional description for this build job to be included in the build reports.
 # Since plugin version 1.4
-invoker.description = Generates and tests a Touch Ant Plugin
+invoker.description = Generates and tests a ${pluginName}
 
 # A comma separated list of JRE versions on which this build job should be run.
 # Since plugin version 1.4
