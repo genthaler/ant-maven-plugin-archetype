@@ -8,6 +8,15 @@
 		<requiredProperty key="goalName">
 			<defaultValue>touch</defaultValue>
 		</requiredProperty>
+		<requiredProperty key="pluginPrefix">
+			<defaultValue>touch</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="pluginName">
+			<defaultValue>Ant Touch Maven Plugin</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="pluginDescription">
+			<defaultValue>Maven plugin using the Apach Ant Touch task to touch a given file</defaultValue>
+		</requiredProperty>
 	</requiredProperties>
 	<fileSets>
 		<fileSet filtered="true" encoding="UTF-8">
