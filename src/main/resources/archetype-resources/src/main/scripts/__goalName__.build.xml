@@ -2,7 +2,7 @@
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
 <project>
-	<target name="default">
-		<${goalName}>${symbol_dollar}{${parameter}}</${goalName}>
+	<target name="${goalName}">
+		<${goalName} ${parameterName}="${symbol_dollar}{${parameterName}}"></${goalName}>
 	</target>
 </project>

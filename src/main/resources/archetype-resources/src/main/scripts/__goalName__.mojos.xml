@@ -6,13 +6,13 @@
 		<mojo>
 			<goal>${goalName}</goal>
 			<call>${goalName}</call>
-			<description>${goalDescription}</description>
+			<description>${pluginDescription}</description>
 			<parameters>
 				<parameter>
-					<name>${parameter}</name>
-					<property>${parameter}</property>
+					<name>${parameterName}</name>
+					<property>${parameterName}</property>
 					<required>false</required>
-					<expression>${symbol_dollar}{${parameter}}</expression>
+					<expression>${symbol_dollar}{${parameterName}}</expression>
 					<type>${symbol_dollar}{${parameterType}}</type>
 					<defaultValue>${parameterDefaultValue}</defaultValue>
 					<description>${parameterDescription}</description>

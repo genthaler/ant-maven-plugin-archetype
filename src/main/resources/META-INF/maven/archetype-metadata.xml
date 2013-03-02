@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <archetype-descriptor
 	xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
-	name="ant-based-maven-plugin"
+	name="maven-archetype-ant-plugin"
 	xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<requiredProperties>
-		<requiredProperty key="pluginPrefix">
-			<defaultValue>touch</defaultValue>
-		</requiredProperty>
 		<requiredProperty key="pluginName">
 			<defaultValue>Ant Touch Maven Plugin</defaultValue>
 		</requiredProperty>
@@ -17,7 +14,10 @@
 		<requiredProperty key="goalName">
 			<defaultValue>touch</defaultValue>
 		</requiredProperty>
-		<requiredProperty key="parameter">
+		<requiredProperty key="goalPrefix">
+			<defaultValue>touch</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="parameterName">
 			<defaultValue>file</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="parameterType">
@@ -28,6 +28,9 @@
 		</requiredProperty>
 		<requiredProperty key="parameterExpression">
 			<defaultValue>file</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="parameterDefaultValue">
+			<defaultValue>touched.txt</defaultValue>
 		</requiredProperty>
 	</requiredProperties>
 	<fileSets>
