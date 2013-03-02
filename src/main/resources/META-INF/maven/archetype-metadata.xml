@@ -30,7 +30,7 @@
 			<defaultValue>file</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="parameterDefaultValue">
-			<defaultValue>touched.txt</defaultValue>
+			<defaultValue>touch.txt</defaultValue>
 		</requiredProperty>
 	</requiredProperties>
 	<fileSets>
