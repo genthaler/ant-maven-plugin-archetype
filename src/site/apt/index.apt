@@ -1,16 +1,14 @@
  ------
  Introduction
  ------
- Jason van Zyl
+ GŸnther Enthaler
  ------
- 2010-04-26
+ 2013-03-04
  ------
 
-Maven 2 SuperDuper Plugin
+Maven 2 Archetype for an Ant-Based Plugin
 
-  This plugin is used to transform your development life. Don't bother with self-help
-  books on how to get over your build-time blues. Just use this plugin and
-  everything will miraculously change.
+  This archetype will generate a skeleton Maven 2 Ant-Based Plugin 
 
 * Goals Overview
 
@@ -20,13 +18,11 @@ Maven 2 SuperDuper Plugin
 
 * Usage
 
-  General instructions on how to use the SuperDuper Plugin can be found on the {{{./usage.html}usage page}}. Some more
+  General instructions on how to use the this archetype can be found on the {{{./usage.html}usage page}}. Some more
   specific use cases are described in the examples given below.
 
   In case you still have questions regarding the plugin's usage, please have a look at the {{{./faq.html}FAQ}} and feel
-  free to contact the {{{./mail-lists.html}user mailing list}}. The posts to the mailing list are archived and could
-  already contain the answer to your question as part of an older thread. Hence, it is also worth browsing/searching
-  the {{{./mail-lists.html}mail archive}}.
+  free to {{{./issue-tracking.html}ask a question}}. It is also worth browsing/searching {{{./issue-tracking.html}previous issues}}.
 
   If you feel like the plugin is missing a feature or has a defect, you can fill a feature request or bug report in our
   {{{./issue-tracking.html}issue tracker}}. When creating a new issue, please provide a comprehensive description of your
