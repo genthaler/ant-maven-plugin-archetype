@@ -25,5 +25,5 @@ Please comment at [the forum](https://github.com/genthaler/maven-archetype-ant-p
 * [Maven - Guide to Developing Java Plugins](http://maven.apache.org/guides/plugin/guide-java-plugin-development.html)
 * [MaestroDev | Developing your First Mojo](http://www.maestrodev.com/better-builds-with-maven/developing-custom-maven-plugins/developing-your-first-mojo/)
 * [Maven Plugin Plugin - Introduction.html](http://maven.apache.org/plugin-tools/maven-plugin-plugin)
-[Maven Archetype Plugin](http://maven.apache.org/archetype/maven-archetype-plugin)
-* [Touch Ant Task](http://ant.apache.org/manual/Tasks/touch.html)  (used in the integration test)
+* [Maven Archetype Plugin](http://maven.apache.org/archetype/maven-archetype-plugin)
+* [Touch Ant Task](http://ant.apache.org/manual/Tasks/touch.html)  
