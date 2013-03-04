@@ -10,12 +10,6 @@ Maven 2 Archetype for an Ant-Based Plugin
 
   This archetype will generate a skeleton Maven 2 Ant-Based Plugin 
 
-* Goals Overview
-
-  * {{{./superduper-transform.html}superduper:transform}} performs the miraculous build transformation.
-
-  []
-
 * Usage
 
   General instructions on how to use the this archetype can be found on the {{{./usage.html}usage page}}. Some more
