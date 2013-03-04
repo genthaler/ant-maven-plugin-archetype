@@ -6,7 +6,7 @@
  2013-03-04
  ------
 
-Maven 2 Archetype for an Ant-Based Plugin
+${project.name}
 
   This archetype will generate a skeleton Maven 2 Ant-Based Plugin 
 
@@ -27,7 +27,7 @@ Maven 2 Archetype for an Ant-Based Plugin
 
 * Examples
 
-  To provide you with better understanding of some usages of the SuperDuper Plugin,
+  To provide you with better understanding of some usages of the ${project.name},
   you can take a look at the following examples:
 
-  * {{{./examples/sample-example.html}Sample Example}}
+  * {{{./examples/example.html}Example}}

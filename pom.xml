@@ -7,7 +7,7 @@
 	<packaging>maven-archetype</packaging>
 	<name>Maven Archetype Ant-based Maven Plugin</name>
 	<description>Maven Archetype to generate an Ant-based Maven Plugin</description>
-	<url>http://maven.apache.org</url>
+	<url>http://github.com/genthaler/maven-archetype-ant-plugin</url>
 	<inceptionYear>2012</inceptionYear>
 	<licenses>
 		<license>
@@ -33,8 +33,9 @@
 	</issueManagement>
 	<distributionManagement>
 		<site>
-			<id>website</id>
-			<url>file:///Users/bonj/Developer/Java/target/deployed-site</url>
+			<id>github</id>
+			<name>GitHub Wiki</name>
+			<url>http://github.com/genthaler/maven-archetype-ant-plugin/wiki</url>
 		</site>
 		<downloadUrl>https://github.com/genthaler/maven-archetype-ant-plugin/archive/master.zip</downloadUrl>
 	</distributionManagement>
@@ -130,52 +131,8 @@
 	<reporting>
 		<plugins>
 			<plugin>
-				<artifactId>maven-plugin-plugin</artifactId>
-				<version>3.2</version>
-				<reportSets>
-					<reportSet>
-						<reports>
-							<report>report</report>
-						</reports>
-					</reportSet>
-				</reportSets>
-			</plugin>
-			<plugin>
 				<artifactId>maven-invoker-plugin</artifactId>
 				<version>${mavenInvokerPluginVersion}</version>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>l10n-maven-plugin</artifactId>
-				<version>1.0-alpha-2</version>
-				<configuration>
-					<locales>
-						<locale>de</locale>
-						<locale>fr</locale>
-						<locale>sv</locale>
-					</locales>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-changes-plugin</artifactId>
-				<version>2.5</version>
-				<reportSets>
-					<reportSet>
-						<reports>
-							<report>changes-report</report>
-						</reports>
-					</reportSet>
-				</reportSets>
-				<configuration>
-					<!-- For JIRA-report -->
-					<columnNames>Type,Key,Summary,Assignee,Status,Resolution,Fix
-						Version</columnNames>
-					<maxEntries>200</maxEntries>
-					<onlyCurrentVersion>true</onlyCurrentVersion>
-					<resolutionIds>Closed</resolutionIds>
-					<sortColumnNames>Type,Key</sortColumnNames>
-				</configuration>
 			</plugin>
 		</plugins>
 	</reporting>
