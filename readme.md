@@ -3,7 +3,10 @@
 ## Current status
 
 It's working! You can now use it to generate a simple Ant-based plugin with a correspondingly simple integration test.
+
 The site is also complete. See it at the project's [GitHub Page](http://genthaler.github.com/maven-archetype-ant-plugin)
+
+Last thing is to use the release plugin to update the version to 1.0.
 
 ## groupId
 
