@@ -7,7 +7,7 @@
 	<packaging>maven-archetype</packaging>
 	<name>Maven Archetype Ant-based Maven Plugin</name>
 	<description>Maven Archetype to generate an Ant-based Maven Plugin</description>
-	<url>http://github.com/genthaler/maven-archetype-ant-plugin</url>
+	<url>http://genthaler.github.com/maven-archetype-ant-plugin/</url>
 	<inceptionYear>2012</inceptionYear>
 	<licenses>
 		<license>
@@ -34,13 +34,14 @@
 	<distributionManagement>
 		<site>
 			<id>github</id>
-			<name>GitHub Wiki</name>
-			<url>http://github.com/genthaler/maven-archetype-ant-plugin/wiki</url>
+			<name>GitHub</name>
+			<url>http://genthaler.github.com/maven-archetype-ant-plugin/</url>
 		</site>
 		<downloadUrl>https://github.com/genthaler/maven-archetype-ant-plugin/archive/master.zip</downloadUrl>
 	</distributionManagement>
 	<properties>
 		<antVersion>1.8</antVersion>
+		<github.global.server>github</github.global.server>
 		<mavenInvokerPluginVersion>1.8</mavenInvokerPluginVersion>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -72,9 +73,51 @@
 					<version>3.2</version>
 					<!-- same version as build plugin -->
 				</plugin>
+				<plugin>
+					<groupId>com.github.github</groupId>
+					<artifactId>downloads-maven-plugin</artifactId>
+					<version>0.5</version>
+				</plugin>
+				<plugin>
+					<groupId>com.github.github</groupId>
+					<artifactId>site-maven-plugin</artifactId>
+					<version>0.6</version>
+				</plugin>
 			</plugins>
 		</pluginManagement>
 		<plugins>
+			<plugin>
+				<groupId>com.github.github</groupId>
+				<artifactId>downloads-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>install</phase>
+						<goals>
+							<goal>upload</goal>
+						</goals>
+						<configuration>
+							<description>${project.version} release of ${project.name}</description>
+							<override>true</override>
+							<includeAttached>true</includeAttached>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>com.github.github</groupId>
+				<artifactId>site-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>site</phase>
+						<goals>
+							<goal>site</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<message>Creating site for ${project.version}</message>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>com.google.code.sortpom</groupId>
 				<artifactId>maven-sortpom-plugin</artifactId>

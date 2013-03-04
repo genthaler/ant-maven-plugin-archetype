@@ -3,8 +3,7 @@
 ## Current status
 
 It's working! You can now use it to generate a simple Ant-based plugin with a correspondingly simple integration test.
-
-I can't guarantee right now that the generated project will cleanly execute the integration tests; the invoker plugin does some funky things that might cause the integration tests to fail standalone. That's the next thing on my list.
+The site is also complete. See it at the project's [GitHub Page](http://genthaler.github.com/maven-archetype-ant-plugin)
 
 ## groupId
 
