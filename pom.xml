@@ -23,7 +23,7 @@
 		</developer>
 	</developers>
 	<scm>
-		<connection>scm:git:git://github.com/genthaler/maven-archetype-ant-plugin.git</connection>
+		<connection>scm:git:https://github.com/genthaler/maven-archetype-ant-plugin.git</connection>
 		<developerConnection>scm:git:https://github.com/genthaler/maven-archetype-ant-plugin.git</developerConnection>
 		<url>http://github.com/genthaler/maven-archetype-ant-plugin</url>
 		<tag>HEAD</tag>
