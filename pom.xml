@@ -22,9 +22,15 @@
 		</developer>
 	</developers>
 	<scm>
+<<<<<<< HEAD
 		<connection>scm:git:git://github.com/genthaler/maven-archetype-ant-plugin.git</connection>
 		<developerConnection>scm:git:https://github.com/genthaler/maven-archetype-ant-plugin.git</developerConnection>
 		<tag>maven-archetype-ant-plugin-1.0</tag>
+=======
+		<connection>scm:git:https://github.com/genthaler/maven-archetype-ant-plugin.git</connection>
+		<developerConnection>scm:git:git://github.com/genthaler/maven-archetype-ant-plugin.git</developerConnection>
+		<tag>HEAD</tag>
+>>>>>>> use git: for developerConnection
 		<url>http://github.com/genthaler/maven-archetype-ant-plugin</url>
 	</scm>
 	<issueManagement>
