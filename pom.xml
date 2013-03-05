@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.apache.maven.archetypes</groupId>
 	<artifactId>maven-archetype-ant-plugin</artifactId>
@@ -24,8 +25,8 @@
 	<scm>
 		<connection>scm:git:git://github.com/genthaler/maven-archetype-ant-plugin.git</connection>
 		<developerConnection>scm:git:https://github.com/genthaler/maven-archetype-ant-plugin.git</developerConnection>
-		<tag>maven-archetype-ant-plugin-1.0</tag>
 		<url>http://github.com/genthaler/maven-archetype-ant-plugin</url>
+		<tag>HEAD</tag>
 	</scm>
 	<issueManagement>
 		<system>GitHub</system>
