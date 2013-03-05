@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.apache.maven.archetypes</groupId>
 	<artifactId>maven-archetype-ant-plugin</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.0</version>
 	<packaging>maven-archetype</packaging>
 	<name>Maven Archetype Ant-based Maven Plugin</name>
 	<description>Maven Archetype to generate an Ant-based Maven Plugin</description>
@@ -24,7 +24,7 @@
 	<scm>
 		<connection>scm:git:git://github.com/genthaler/maven-archetype-ant-plugin.git</connection>
 		<developerConnection>scm:git:https://github.com/genthaler/maven-archetype-ant-plugin.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>maven-archetype-ant-plugin-1.0</tag>
 		<url>http://github.com/genthaler/maven-archetype-ant-plugin</url>
 	</scm>
 	<issueManagement>
