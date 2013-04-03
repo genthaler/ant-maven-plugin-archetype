@@ -23,14 +23,14 @@
 		</developer>
 	</developers>
 	<scm>
-		<connection>scm:git:https://github.com/genthaler/maven-archetype-ant-plugin.git</connection>
-		<developerConnection>scm:git:https://github.com/genthaler/maven-archetype-ant-plugin.git</developerConnection>
+		<connection>scm:git:https://github.com/genthaler/${project.artifactId}.git</connection>
+		<developerConnection>scm:git:https://github.com/genthaler/${project.artifactId}.git</developerConnection>
 		<tag>HEAD</tag>
-		<url>https://github.com/genthaler/maven-archetype-ant-plugin</url>
+		<url>https://github.com/genthaler/${project.artifactId}</url>
 	</scm>
 	<issueManagement>
 		<system>GitHub</system>
-		<url>https://github.com/genthaler/maven-archetype-ant-plugin/issues</url>
+		<url>https://github.com/genthaler/${project.artifactId}/issues</url>
 	</issueManagement>
 	<distributionManagement>
 		<repository>
@@ -46,9 +46,9 @@
 		<site>
 			<id>github</id>
 			<name>GitHub</name>
-			<url>http://genthaler.github.com/maven-archetype-ant-plugin/</url>
+			<url>http://genthaler.github.com/${project.artifactId}/</url>
 		</site>
-		<downloadUrl>https://github.com/genthaler/maven-archetype-ant-plugin/archive/master.zip</downloadUrl>
+		<downloadUrl>https://raw.github.com/genthaler/${project.artifactId}//mvn-repo/org/apache/maven/archetypes/${project.artifactId}/${project.version}/${project.artifactId}-${project.version}.jar</downloadUrl>
 	</distributionManagement>
 	<properties>
 		<antVersion>1.8</antVersion>
@@ -101,6 +101,10 @@
 				<plugin>
 					<artifactId>maven-release-plugin</artifactId>
 					<version>2.4</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-site-plugin</artifactId>
+					<version>3.2</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>
@@ -197,6 +201,12 @@
 						<sitePluginVersion>3.0</sitePluginVersion>
 						<antVersion>${antVersion}</antVersion>
 					</filterProperties>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-site-plugin</artifactId>
+				<configuration>
+					<skipDeploy>true</skipDeploy>
 				</configuration>
 			</plugin>
 		</plugins>
