@@ -25,28 +25,24 @@
 	<scm>
 		<connection>scm:git:https://github.com/genthaler/maven-archetype-ant-plugin.git</connection>
 		<developerConnection>scm:git:https://github.com/genthaler/maven-archetype-ant-plugin.git</developerConnection>
-		<url>https://github.com/genthaler/maven-archetype-ant-plugin</url>
 		<tag>HEAD</tag>
+		<url>https://github.com/genthaler/maven-archetype-ant-plugin</url>
 	</scm>
 	<issueManagement>
 		<system>GitHub</system>
 		<url>https://github.com/genthaler/maven-archetype-ant-plugin/issues</url>
 	</issueManagement>
 	<distributionManagement>
-<<<<<<< HEAD
-	    <repository>
-   	     <id>internal.repo</id>
-     	   <name>Temporary Staging Repository</name>
- 	       <url>file://${project.build.directory}/mvn-repo</url>
- 	   </repository>
-=======
 		<repository>
-			<url>file:///tmp</url>
+			<id>internal.repo</id>
+			<name>Temporary Staging Repository</name>
+			<url>file://${project.build.directory}/mvn-repo</url>
 		</repository>
 		<snapshotRepository>
-			<url>file:///tmp</url>
+			<id>internal.repo</id>
+			<name>Temporary Staging Repository</name>
+			<url>file://${project.build.directory}/mvn-repo</url>
 		</snapshotRepository>
->>>>>>> refs/remotes/origin/master
 		<site>
 			<id>github</id>
 			<name>GitHub</name>
@@ -111,7 +107,7 @@
 		<plugins>
 			<plugin>
 				<artifactId>maven-release-plugin</artifactId>
-				<configuration />
+				<configuration></configuration>
 			</plugin>
 			<plugin>
 				<artifactId>maven-docck-plugin</artifactId>
@@ -120,23 +116,6 @@
 						<goals>
 							<goal>check</goal>
 						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>com.github.github</groupId>
-				<artifactId>downloads-maven-plugin</artifactId>
-				<executions>
-					<execution>
-						<phase>install</phase>
-						<goals>
-							<goal>upload</goal>
-						</goals>
-						<configuration>
-							<description>${project.version} release of ${project.name}</description>
-							<override>true</override>
-							<includeAttached>true</includeAttached>
-						</configuration>
 					</execution>
 				</executions>
 			</plugin>
@@ -158,14 +137,15 @@
 						<id>repo</id>
 						<phase>deploy</phase>
 						<goals>
-		                  <goal>site</goal>
-		                </goals>
-					    <configuration>
-			                <message>Maven artifacts for ${project.version}</message>
-			                <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
-			                <branch>refs/heads/mvn-repo</branch>
-			            </configuration>
-	               </execution>
+							<goal>site</goal>
+						</goals>
+						<configuration>
+							<message>Maven artifacts for ${project.version}</message>
+							<outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
+							<branch>refs/heads/mvn-repo</branch>
+							<merge>true</merge>
+						</configuration>
+					</execution>
 				</executions>
 			</plugin>
 			<plugin>
