@@ -33,6 +33,11 @@
 		<url>https://github.com/genthaler/maven-archetype-ant-plugin/issues</url>
 	</issueManagement>
 	<distributionManagement>
+	    <repository>
+   	     <id>internal.repo</id>
+     	   <name>Temporary Staging Repository</name>
+ 	       <url>file://${project.build.directory}/mvn-repo</url>
+ 	   </repository>
 		<site>
 			<id>github</id>
 			<name>GitHub</name>
@@ -132,15 +137,28 @@
 				<artifactId>site-maven-plugin</artifactId>
 				<executions>
 					<execution>
-						<phase>site</phase>
+						<id>site</id>
+						<phase>site-deploy</phase>
 						<goals>
 							<goal>site</goal>
 						</goals>
+						<configuration>
+							<message>Creating site for ${project.version}</message>
+						</configuration>
 					</execution>
+					<execution>
+						<id>repo</id>
+						<phase>deploy</phase>
+						<goals>
+		                  <goal>site</goal>
+		                </goals>
+					    <configuration>
+			                <message>Maven artifacts for ${project.version}</message>
+			                <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
+			                <branch>refs/heads/mvn-repo</branch>
+			            </configuration>
+	               </execution>
 				</executions>
-				<configuration>
-					<message>Creating site for ${project.version}</message>
-				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>com.google.code.sortpom</groupId>
