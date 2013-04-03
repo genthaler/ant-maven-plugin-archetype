@@ -30,6 +30,26 @@
 		<menu name="Examples">
 			<item name="Example usage" href="examples/example.html" />
 		</menu>
+		<menu name="Links">
+			<item name="Maven - Guide to Developing Ant Plugins"
+				href="http://maven.apache.org/guides/plugin/guide-ant-plugin-development.html" />
+			<item name="Maven Plugin Plugin - Writing an Ant Maven Plugin"
+				href="http://maven.apache.org/plugin-tools/maven-plugin-plugin/examples/ant-mojo.html" />
+			<item
+				name="4.4. Creating an Ant Maven Plugin _ Documentation Sonatype.com"
+				href="http://www.sonatype.com/books/mcookbook/reference/ch04s04.html" />
+			<item name="Maven - Developers centre - Testing Plugins Strategies"
+				href="http://maven.apache.org/plugin-developers/plugin-testing.html" />
+			<item name="Maven - Guide to Developing Java Plugins"
+				href="http://maven.apache.org/guides/plugin/guide-java-plugin-development.html" />
+			<item name="MaestroDev | Developing your First Mojo"
+				href="http://www.maestrodev.com/better-builds-with-maven/developing-custom-maven-plugins/developing-your-first-mojo/" />
+			<item name="Maven Plugin Plugin - Introduction"
+				href="http://maven.apache.org/plugin-tools/maven-plugin-plugin" />
+			<item name="Maven Archetype Plugin"
+				href="http://maven.apache.org/archetype/maven-archetype-plugin" />
+			<item name="Touch Ant Task" href="http://ant.apache.org/manual/Tasks/touch.html" />
+		</menu>
 		<menu ref="reports" />
 	</body>
 </project>

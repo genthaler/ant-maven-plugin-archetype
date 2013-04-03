@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.apache.maven.archetypes</groupId>
 	<artifactId>maven-archetype-ant-plugin</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.1-SNAPSHOT</version>
 	<packaging>maven-archetype</packaging>
 	<name>Maven Archetype Ant-based Maven Plugin</name>
 	<description>Maven Archetype to generate an Ant-based Maven Plugin</description>
@@ -23,21 +23,30 @@
 		</developer>
 	</developers>
 	<scm>
-		<connection>scm:git:git://github.com/genthaler/maven-archetype-ant-plugin.git</connection>
+		<connection>scm:git:https://github.com/genthaler/maven-archetype-ant-plugin.git</connection>
 		<developerConnection>scm:git:https://github.com/genthaler/maven-archetype-ant-plugin.git</developerConnection>
+		<url>https://github.com/genthaler/maven-archetype-ant-plugin</url>
 		<tag>HEAD</tag>
-		<url>http://github.com/genthaler/maven-archetype-ant-plugin</url>
 	</scm>
 	<issueManagement>
 		<system>GitHub</system>
 		<url>https://github.com/genthaler/maven-archetype-ant-plugin/issues</url>
 	</issueManagement>
 	<distributionManagement>
+<<<<<<< HEAD
 	    <repository>
    	     <id>internal.repo</id>
      	   <name>Temporary Staging Repository</name>
  	       <url>file://${project.build.directory}/mvn-repo</url>
  	   </repository>
+=======
+		<repository>
+			<url>file:///tmp</url>
+		</repository>
+		<snapshotRepository>
+			<url>file:///tmp</url>
+		</snapshotRepository>
+>>>>>>> refs/remotes/origin/master
 		<site>
 			<id>github</id>
 			<name>GitHub</name>
@@ -102,8 +111,7 @@
 		<plugins>
 			<plugin>
 				<artifactId>maven-release-plugin</artifactId>
-				<configuration>
-				</configuration>
+				<configuration />
 			</plugin>
 			<plugin>
 				<artifactId>maven-docck-plugin</artifactId>

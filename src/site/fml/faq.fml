@@ -9,7 +9,7 @@
 			<answer>
 				<p>
 					An intellectual exercise, mostly, although there have been
-					instances where I've had some boilerplant Ant script that I've had
+					instances where I've had some boilerplate Ant script that I've had
 					to shove into an
 					<a href="http://maven.apache.org/plugins/maven-antrun-plugin">AntRun</a>
 					plugin definition, which I'm not too fond of.

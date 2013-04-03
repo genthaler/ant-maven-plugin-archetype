@@ -9,7 +9,7 @@
 			<defaultValue>Ant Touch Maven Plugin</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="pluginDescription">
-			<defaultValue>Maven plugin using the Apach Ant Touch task to touch a given file</defaultValue>
+			<defaultValue>Maven plugin using the Apache Ant Touch task to touch a given file</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="goalName">
 			<defaultValue>touch</defaultValue>
