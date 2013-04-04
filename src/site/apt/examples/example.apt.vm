@@ -15,7 +15,8 @@ $ mvn archetype:generate \
 	-DinteractiveMode=true \
 	-DarchetypeGroupId=${project.groupId} \
 	-DarchetypeArtifactId=${project.artifactId} \
-	-DarchetypeVersion=${project.version}
+	-DarchetypeVersion=${project.version} \
+	-DarchetypeRepository=https://raw.github.com/genthaler/${project.artifactId}/mvn-repo
 [INFO] Scanning for projects...
 [INFO]                                                                         
 [INFO] ------------------------------------------------------------------------
