@@ -33,14 +33,14 @@
 	</issueManagement>
 	<distributionManagement>
 		<repository>
-			<id>internal.repo</id>
-			<name>Temporary Staging Repository</name>
-			<url>file://${project.build.directory}/mvn-repo</url>
+			<id>github</id>
+			<name>GitHub ${project.artifactId} Repository</name>
+			<url>https://raw.github.com/genthaler/${project.artifactId}/mvn-repo</url>
 		</repository>
 		<snapshotRepository>
-			<id>internal.repo</id>
-			<name>Temporary Staging Repository</name>
-			<url>file://${project.build.directory}/mvn-repo</url>
+			<id>github</id>
+			<name>GitHub ${project.artifactId} Repository</name>
+			<url>https://raw.github.com/genthaler/${project.artifactId}/mvn-repo</url>
 		</snapshotRepository>
 		<site>
 			<id>github</id>
@@ -65,6 +65,10 @@
 		</extensions>
 		<pluginManagement>
 			<plugins>
+				<plugin>
+					<artifactId>maven-deploy-plugin</artifactId>
+					<version>2.7</version>
+				</plugin>
 				<plugin>
 					<artifactId>maven-project-info-reports-plugin</artifactId>
 					<version>2.6</version>
@@ -104,8 +108,14 @@
 		</pluginManagement>
 		<plugins>
 			<plugin>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<configuration>
+					<altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>
+				</configuration>
+			</plugin>
+			<plugin>
 				<artifactId>maven-release-plugin</artifactId>
-				<configuration />
+				<configuration></configuration>
 			</plugin>
 			<plugin>
 				<artifactId>maven-docck-plugin</artifactId>
