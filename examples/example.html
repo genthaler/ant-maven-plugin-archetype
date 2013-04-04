@@ -30,7 +30,7 @@
             
                 <div class="xleft">
         <span id="publishDate">Last Published: 2013-04-04</span>
-                  &nbsp;| <span id="projectVersion">Version: 1.1.1</span>
+                  &nbsp;| <span id="projectVersion">Version: 1.1.2-SNAPSHOT</span>
                       </div>
             <div class="xright">        
             
@@ -114,7 +114,7 @@ $ mvn archetype:generate \
         -DinteractiveMode=true \
         -DarchetypeGroupId=org.apache.maven.archetypes \
         -DarchetypeArtifactId=maven-archetype-ant-plugin \
-        -DarchetypeVersion=1.1.1 \
+        -DarchetypeVersion=1.1.2-SNAPSHOT \
         -DarchetypeRepository=https://raw.github.com/genthaler/maven-archetype-ant-plugin/mvn-repo
 [INFO] Scanning for projects...
 [INFO]                                                                         
@@ -128,7 +128,11 @@ $ mvn archetype:generate \
 [INFO] 
 [INFO] --- maven-archetype-plugin:2.2:generate (default-cli) @ standalone-pom ---
 [INFO] Generating project in Interactive mode
-[INFO] Archetype repository missing. Using the one from [org.apache.maven.archetypes:maven-archetype-ant-plugin:1.1.1] found in catalog local
+[INFO] Archetype defined by properties
+Downloading: https://raw.github.com/genthaler/maven-archetype-ant-plugin/mvn-repo/org/apache/maven/archetypes/maven-archetype-ant-plugin/1.1.2-SNAPSHOT/maven-archetype-ant-plugin-1.1.2-SNAPSHOT.jar
+Downloaded: https://raw.github.com/genthaler/maven-archetype-ant-plugin/mvn-repo/org/apache/maven/archetypes/maven-archetype-ant-plugin/1.1.2-SNAPSHOT/maven-archetype-ant-plugin-1.1.2-SNAPSHOT.jar (8 KB at 2.9 KB/sec)
+Downloading: https://raw.github.com/genthaler/maven-archetype-ant-plugin/mvn-repo/org/apache/maven/archetypes/maven-archetype-ant-plugin/1.1.2-SNAPSHOT/maven-archetype-ant-plugin-1.1.2-SNAPSHOT.pom
+Downloaded: https://raw.github.com/genthaler/maven-archetype-ant-plugin/mvn-repo/org/apache/maven/archetypes/maven-archetype-ant-plugin/1.1.2-SNAPSHOT/maven-archetype-ant-plugin-1.1.2-SNAPSHOT.pom (7 KB at 8.6 KB/sec)
 Define value for property 'groupId': : com.example
 Define value for property 'artifactId': : touch-ant-maven-plugin
 Define value for property 'version':  1.0-SNAPSHOT: : 
@@ -158,7 +162,7 @@ pluginDescription: Maven plugin using the Apach Ant Touch task to touch a given 
 pluginName: Ant Touch Maven Plugin
  Y: : 
 [INFO] ----------------------------------------------------------------------------
-[INFO] Using following parameters for creating project from Archetype: maven-archetype-ant-plugin:1.1.1
+[INFO] Using following parameters for creating project from Archetype: maven-archetype-ant-plugin:1.1.2-SNAPSHOT
 [INFO] ----------------------------------------------------------------------------
 [INFO] Parameter: groupId, Value: com.example
 [INFO] Parameter: artifactId, Value: touch-ant-maven-plugin
@@ -192,7 +196,8 @@ $ mvn archetype:generate \
         -DinteractiveMode=false \
         -DarchetypeGroupId=org.apache.maven.archetypes \
         -DarchetypeArtifactId=maven-archetype-ant-plugin \
-        -DarchetypeVersion=1.1.1
+        -DarchetypeVersion=1.1.2-SNAPSHOT
+        -DarchetypeRepository=https://raw.github.com/genthaler/maven-archetype-ant-plugin/mvn-repo \
         -DgroupId=org.apache.maven.plugins \
         -DartifactId=touch-ant-maven-plugin \
         -Dversion=0.1-SNAPSHOT \
@@ -217,9 +222,13 @@ $ mvn archetype:generate \
 [INFO] 
 [INFO] --- maven-archetype-plugin:2.2:generate (default-cli) @ standalone-pom ---
 [INFO] Generating project in Batch mode
-[INFO] Archetype repository missing. Using the one from [org.apache.maven.archetypes:maven-archetype-ant-plugin:1.1.1] found in catalog local
+[INFO] Archetype defined by properties
+Downloading: https://raw.github.com/genthaler/maven-archetype-ant-plugin/mvn-repo/org/apache/maven/archetypes/maven-archetype-ant-plugin/1.1.2-SNAPSHOT/maven-archetype-ant-plugin-1.1.2-SNAPSHOT.jar
+Downloaded: https://raw.github.com/genthaler/maven-archetype-ant-plugin/mvn-repo/org/apache/maven/archetypes/maven-archetype-ant-plugin/1.1.2-SNAPSHOT/maven-archetype-ant-plugin-1.1.2-SNAPSHOT.jar (8 KB at 2.9 KB/sec)
+Downloading: https://raw.github.com/genthaler/maven-archetype-ant-plugin/mvn-repo/org/apache/maven/archetypes/maven-archetype-ant-plugin/1.1.2-SNAPSHOT/maven-archetype-ant-plugin-1.1.2-SNAPSHOT.pom
+Downloaded: https://raw.github.com/genthaler/maven-archetype-ant-plugin/mvn-repo/org/apache/maven/archetypes/maven-archetype-ant-plugin/1.1.2-SNAPSHOT/maven-archetype-ant-plugin-1.1.2-SNAPSHOT.pom (7 KB at 8.6 KB/sec)
 [INFO] ----------------------------------------------------------------------------
-[INFO] Using following parameters for creating project from Archetype: maven-archetype-ant-plugin:1.1.1
+[INFO] Using following parameters for creating project from Archetype: maven-archetype-ant-plugin:1.1.2-SNAPSHOT
 [INFO] ----------------------------------------------------------------------------
 [INFO] Parameter: groupId, Value: org.apache.maven.plugins
 [INFO] Parameter: artifactId, Value: touch-ant-maven-plugin
