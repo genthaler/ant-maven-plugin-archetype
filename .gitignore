@@ -1,0 +1,7 @@
+/target
+
+*.prefs
+
+*.bak
+
+.project

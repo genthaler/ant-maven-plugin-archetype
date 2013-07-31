@@ -18,7 +18,13 @@
 	</licenses>
 	<developers>
 		<developer>
+			<id>genthaler</id>
 			<name>Günther Enthaler</name>
+			<email>genthaler@github.com</email>
+			<roles>
+				<role>Java Developer</role>
+			</roles>
+			<timezone>-10</timezone>
 		</developer>
 	</developers>
 	<scm>
@@ -120,7 +126,7 @@
 			</plugin>
 			<plugin>
 				<artifactId>maven-release-plugin</artifactId>
-				<configuration />
+				<configuration></configuration>
 			</plugin>
 			<plugin>
 				<artifactId>maven-docck-plugin</artifactId>
