@@ -1,4 +1,4 @@
-### a Maven archetype to create an Ant-based Maven plugin
+### A Maven archetype to create an Ant-based Maven plugin
 
 Please see the [Project Documentation](http://genthaler.github.com/ant-maven-plugin-archetype)
 
