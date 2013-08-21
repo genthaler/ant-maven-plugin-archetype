@@ -3,3 +3,4 @@ target
 *.bak
 .project
 .c9revisions
+/.settings
