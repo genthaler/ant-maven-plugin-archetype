@@ -1,24 +1,8 @@
-# Maven Archetype to create an Ant-based Maven Plugin
+### a Maven archetype to create an Ant-based Maven plugin
 
-## Current status
+Please see the [Project Documentation](http://genthaler.github.com/ant-maven-plugin-archetype)
 
-It's working! You can now use it to generate a simple Ant-based plugin with a correspondingly simple integration test.
-
-The site is also complete. See it at the project's [GitHub Page](http://genthaler.github.com/maven-archetype-ant-plugin)
-
-Last thing is to use the release plugin to update the version to 1.0.
-
-## groupId
-
-Now, I'm being slightly rude by using the apache groupId. I'm doing it in the hope they'll pick this up and integrate it.
-
-## artifactId
-
-How does it sound? I'm trying to follow the pattern of the existing Apache Maven archetypes...
-
-Please comment at [the forum](https://github.com/genthaler/maven-archetype-ant-plugin/issues).
-
-## Links
+#### Links
 
 * [Maven - Guide to Developing Ant Plugins](http://maven.apache.org/guides/plugin/guide-ant-plugin-development.html)
 * [Maven Plugin Plugin - Writing an Ant Maven Plugin](http://maven.apache.org/plugin-tools/maven-plugin-plugin/examples/ant-mojo.html)

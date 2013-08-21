@@ -3,4 +3,3 @@ jdk: oraclejdk7
 env: MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=128m"
 install: mvn dependency:resolve
 script: mvn clean install
-after_failure: cat /home/travis/build/genthaler/maven-archetype-ant-plugin/target/it/touch/build.log
