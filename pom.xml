@@ -202,7 +202,7 @@
 				<executions>
 					<execution>
 						<id>github.com</id>
-						<phase>validate</phase>
+						<phase>release</phase>
 						<goals>
 							<goal>set</goal>
 						</goals>
