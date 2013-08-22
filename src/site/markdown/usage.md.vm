@@ -1,0 +1,10 @@
+# ${project.name}
+
+## Usage
+
+This archetype will create a skeleton Ant-based Maven 2/3 plugin
+
+	mvn archetype:generate \
+		-DarchetypeGroupId=${project.groupId} \
+		-DarchetypeArtifactId=${project.artifactId} \
+		-DarchetypeVersion=${project.version}
