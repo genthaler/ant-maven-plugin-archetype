@@ -18,14 +18,14 @@
 ~~ #L%
 ~~~
  ------
- SMTP Authentication
+ ${pluginName}
  ------
- Allan Ramirez
+ ${user.name}
  ------
- 2005-10-16
+ 2000-01-01
  ------
 
-SMTP Authentication
+${pluginName}
 
   If the SMTP host needs authentication, you can provide your username and password
   in the <<<\<configuration\>>>> section:
@@ -36,8 +36,9 @@ SMTP Authentication
   <build>
     <plugins>
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-changes-plugin</artifactId>
+        <groupId>${groupId}</groupId>
+        <artifactId>${artifactId}</artifactId>
+        <version>${version}</version>
         <configuration>
           <smtpHost>mail.yourhost.com</smtpHost>
           <smtpPort implementation="java.lang.Integer">25</smtpPort>
