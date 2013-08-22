@@ -197,17 +197,17 @@
                 <ul class="nav nav-list">
                     <li class="nav-header">Overview</li>
                                 
-      <li class="active">
-    
-            <a href="#"><i class="none"></i>Introduction</a>
-          </li>
-                  
       <li>
     
-                          <a href="usage.html" title="Usage">
+                          <a href="index.html" title="Introduction">
           <i class="none"></i>
-        Usage</a>
+        Introduction</a>
             </li>
+                  
+      <li class="active">
+    
+            <a href="#"><i class="none"></i>Usage</a>
+          </li>
                   
       <li>
     
@@ -288,104 +288,13 @@
         Touch Ant Task</a>
             </li>
                               <li class="nav-header">Project Documentation</li>
-                                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                          
       <li>
     
                           <a href="project-info.html" title="Project Information">
-          <i class="icon-chevron-down"></i>
+          <i class="icon-chevron-right"></i>
         Project Information</a>
-                    <ul class="nav nav-list">
-                      
-      <li class="active">
-    
-            <a href="#"><i class="none"></i>About</a>
-          </li>
-                      
-      <li>
-    
-                          <a href="team-list.html" title="Project Team">
-          <i class="none"></i>
-        Project Team</a>
-            </li>
-                      
-      <li>
-    
-                          <a href="dependency-info.html" title="Dependency Information">
-          <i class="none"></i>
-        Dependency Information</a>
-            </li>
-                      
-      <li>
-    
-                          <a href="plugins.html" title="Project Plugins">
-          <i class="none"></i>
-        Project Plugins</a>
-            </li>
-                      
-      <li>
-    
-                          <a href="integration.html" title="Continuous Integration">
-          <i class="none"></i>
-        Continuous Integration</a>
-            </li>
-                      
-      <li>
-    
-                          <a href="issue-tracking.html" title="Issue Tracking">
-          <i class="none"></i>
-        Issue Tracking</a>
-            </li>
-                      
-      <li>
-    
-                          <a href="source-repository.html" title="Source Repository">
-          <i class="none"></i>
-        Source Repository</a>
-            </li>
-                      
-      <li>
-    
-                          <a href="license.html" title="Project License">
-          <i class="none"></i>
-        Project License</a>
-            </li>
-                      
-      <li>
-    
-                          <a href="plugin-management.html" title="Plugin Management">
-          <i class="none"></i>
-        Plugin Management</a>
-            </li>
-                      
-      <li>
-    
-                          <a href="distribution-management.html" title="Distribution Management">
-          <i class="none"></i>
-        Distribution Management</a>
-            </li>
-                      
-      <li>
-    
-                          <a href="project-summary.html" title="Project Summary">
-          <i class="none"></i>
-        Project Summary</a>
-            </li>
-                      
-      <li>
-    
-                          <a href="mail-lists.html" title="Mailing Lists">
-          <i class="none"></i>
-        Mailing Lists</a>
-            </li>
-                      
-      <li>
-    
-                          <a href="dependencies.html" title="Dependencies">
-          <i class="none"></i>
-        Dependencies</a>
-            </li>
-              </ul>
-        </li>
+                  </li>
                                                                                                                                             
       <li>
     
@@ -436,11 +345,14 @@
         <div id="bodyColumn"  class="span10" >
                                   
             <h1>Maven Archetype Ant-based Maven Plugin</h1>
-<p>This archetype will generate a skeleton Maven 2 Ant-Based Plugin </p>
-<p>General instructions on how to use the this archetype can be found on the <a href="./usage.html">usage page</a>. Some more specific use cases are described in the examples given below.</p>
-<p>In case you still have questions regarding the plugin&#x2019;s usage, please have a look at the <a href="./faq.html">FAQ</a> and feel free to <a href="./issue-tracking.html">ask a question</a>. It is also worth browsing/searching <a href="./issue-tracking.html">previous issues</a>.</p>
-<p>If you feel like the plugin is missing a feature or has a defect, you can fill a feature request or bug report in our <a href="./issue-tracking.html">issue tracker</a>. When creating a new issue, please provide a comprehensive description of your concern. Especially for fixing bugs it is crucial that the developers can reproduce your problem. For this reason, entire debug logs, POMs or most preferably little demo projects attached to the issue are very much appreciated. Of course, patches are welcome, too. Contributors can check out the project from our <a href="./source-repository.html">source repository</a>.</p>
-<p>To provide you with better understanding of some usages of the Maven Archetype Ant-based Maven Plugin, you can take a look at <a href="./examples/example.html">this example</a>.</p>
+<p>This archetype will create a skeleton Ant-based Maven 2/3 plugin</p>
+
+<div class="source">
+<pre>mvn archetype:generate \
+    -DarchetypeGroupId=com.github.genthaler \
+    -DarchetypeArtifactId=ant-maven-plugin-archetype \
+    -DarchetypeVersion=1.2-SNAPSHOT
+</pre></div>
                   </div>
             </div>
           </div>
