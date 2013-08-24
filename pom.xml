@@ -233,7 +233,7 @@
 				<configuration>
 					<mavenExecutorId>forked-path</mavenExecutorId>
 					<useReleaseProfile>false</useReleaseProfile>
-<!-- 					<arguments>-Psonatype-oss-release</arguments> -->
+					<releaseProfiles>sonatype-oss-release</releaseProfiles>
 					<goals>deploy site-deploy</goals>
 					<username>${github.com.username}</username>
 					<password>${github.com.password}</password>
