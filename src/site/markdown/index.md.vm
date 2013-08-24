@@ -19,11 +19,11 @@
   -->
 # ${project.name}
 
-##  Introduction
+## Introduction
 
 This archetype will generate a skeleton Maven 2 Ant-Based Plugin 
 
-### Usage
+## Usage
 
 General instructions on how to use the this archetype can be found on the [usage page](./usage.html). Some more
 specific use cases are described in the examples given below.
@@ -38,8 +38,7 @@ entire debug logs, POMs or most preferably little demo projects attached to the 
 Of course, patches are welcome, too. Contributors can check out the project from our
 [source repository](./source-repository.html).
 
-### Examples
+## Examples
 
 To provide you with better understanding of some usages of the ${project.name},
 you can take a look at [this example](./examples/example.html).
-
