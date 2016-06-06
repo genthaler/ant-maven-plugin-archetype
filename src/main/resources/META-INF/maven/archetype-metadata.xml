@@ -3,14 +3,12 @@
   #%L
   Maven Archetype Ant-based Maven Plugin
   %%
-  Copyright (C) 2012 - 2013 Günther Enthaler
+  Copyright (C) 2012 - 2016 Günther Enthaler
   %%
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
   You may obtain a copy of the License at
-  
        http://www.apache.org/licenses/LICENSE-2.0
-  
   Unless required by applicable law or agreed to in writing, software
   distributed under the License is distributed on an "AS IS" BASIS,
   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -26,31 +24,32 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<requiredProperties>
 		<requiredProperty key="pluginName">
-			<defaultValue>Ant Touch Maven Plugin</defaultValue>
+<!-- 			<defaultValue>Ant Touch Maven Plugin</defaultValue> -->
 		</requiredProperty>
 		<requiredProperty key="pluginDescription">
-			<defaultValue>Maven plugin using the Apache Ant Touch task to touch a given file</defaultValue>
+<!-- 			<defaultValue>Maven plugin using the Apache Ant Touch task to touch a given file</defaultValue> -->
 		</requiredProperty>
 		<requiredProperty key="goalName">
-			<defaultValue>touch</defaultValue>
+<!-- 			<defaultValue>touch</defaultValue> -->
 		</requiredProperty>
 		<requiredProperty key="goalPrefix">
-			<defaultValue>touch</defaultValue>
+<!-- 			<defaultValue>touch</defaultValue> -->
 		</requiredProperty>
 		<requiredProperty key="parameterName">
-			<defaultValue>file</defaultValue>
+<!-- 			<defaultValue>file</defaultValue> -->
 		</requiredProperty>
 		<requiredProperty key="parameterType">
-			<defaultValue>java.io.File</defaultValue>
+<!-- 			<defaultValue>java.io.File</defaultValue> -->
 		</requiredProperty>
 		<requiredProperty key="parameterDescription">
-			<defaultValue>File to be touched</defaultValue>
+<!-- 			<defaultValue>File to be touched</defaultValue> -->
 		</requiredProperty>
 		<requiredProperty key="parameterExpression">
-			<defaultValue>file</defaultValue>
+<!-- 			<defaultValue>file</defaultValue> -->
 		</requiredProperty>
 		<requiredProperty key="parameterDefaultValue">
-			<defaultValue>touch.txt</defaultValue>
+<!-- 			<defaultValue>touch.txt</defaultValue> -->
+
 		</requiredProperty>
 	</requiredProperties>
 	<fileSets>

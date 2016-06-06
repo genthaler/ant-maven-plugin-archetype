@@ -1,0 +1,29 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<pluginMetadata xmlns="http://maven.apache.org/PLUGIN-METADATA/1.1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/PLUGIN-METADATA/1.1.0 http://maven.apache.org/xsd/plugin-metadata-1.1.0.xsd">
+	<mojos>
+		<mojo>
+			<goal>${goalName}</goal>
+			<call>${goalName}</call>
+			<description>${pluginDescription}</description>
+			<parameters>
+				<parameter>
+					<name>${parameterName}</name>
+					<!-- <alias></alias> -->
+					<property>${parameterName}</property>
+					<required>true</required>
+					<readonly>false</readonly>
+					<expression>${parameterName}</expression>
+					<defaultValue>${parameterDefaultValue}</defaultValue>
+					<type>${parameterType}</type>
+					<description>${parameterDescription}</description>
+					<!-- <deprecated></deprecated> -->
+					<since>${version}</since>
+				</parameter>
+			</parameters>
+		</mojo>
+	</mojos>
+</pluginMetadata>
