@@ -1,6 +1,11 @@
-target
-*.prefs
-*.bak
-.project
-.c9revisions
+/target
 /.settings
+/.classpath
+/.project
+*.bak
+*.versionsBackup
+release.properties
+*.prefs
+.c9revisions
+release.properties
+*.releaseBackup
