@@ -31,21 +31,13 @@
 		<pluginManagement>
 			<plugins>
 				<plugin>
-					<artifactId>maven-deploy-plugin</artifactId>
-					<version>2.7</version>
-				</plugin>
-				<plugin>
 					<artifactId>maven-docck-plugin</artifactId>
 					<version>1.0</version>
 				</plugin>
 				<plugin>
-					<artifactId>maven-release-plugin</artifactId>
-					<version>2.4.1</version>
-				</plugin>
-				<plugin>
 					<groupId>com.github.genthaler</groupId>
 					<artifactId>credentials-maven-plugin</artifactId>
-					<version>1.0</version>
+					<version>1.3</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>
@@ -53,16 +45,6 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>license-maven-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>default-process-sources</id>
-						<phase>process-sources</phase>
-						<goals>
-							<goal>update-project-license</goal>
-							<goal>update-file-header</goal>
-						</goals>
-					</execution>
-				</executions>
 				<configuration>
 					<extraExtensions>
 						<md>xml</md>
@@ -131,23 +113,6 @@
 						</configuration>
 					</execution>
 				</executions>
-			</plugin>
-			<plugin>
-				<artifactId>maven-release-plugin</artifactId>
-				<configuration>
-					<mavenExecutorId>forked-path</mavenExecutorId>
-					<useReleaseProfile>false</useReleaseProfile>
-					<releaseProfiles>sonatype-oss-release</releaseProfiles>
-					<goals>deploy site-deploy</goals>
-					<username>${github.com.username}</username>
-					<password>${github.com.password}</password>
-				</configuration>
-			</plugin>
-			<plugin>
-				<artifactId>maven-site-plugin</artifactId>
-				<configuration>
-					<skipDeploy>true</skipDeploy>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
