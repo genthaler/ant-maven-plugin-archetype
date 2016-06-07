@@ -8,7 +8,7 @@
 		<version>6</version>
 	</parent>
 	<artifactId>ant-maven-plugin-archetype</artifactId>
-	<version>1.2.3-SNAPSHOT</version>
+	<version>1.2.4-SNAPSHOT</version>
 	<packaging>maven-archetype</packaging>
 	<name>Maven Archetype Ant-based Maven Plugin</name>
 	<description>Maven Archetype to generate an Ant-based Maven Plugin</description>
@@ -20,12 +20,6 @@
 		<tag>HEAD</tag>
 		<url>https://github.com/genthaler/${project.artifactId}</url>
 	</scm>
-	<properties>
-		<antVersion>1.8</antVersion>
-		<github.global.server>github</github.global.server>
-		<mavenInvokerPluginVersion>1.8</mavenInvokerPluginVersion>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
 	<build>
 		<extensions>
 			<extension>
@@ -41,46 +35,12 @@
 					<version>2.7</version>
 				</plugin>
 				<plugin>
-					<artifactId>maven-invoker-plugin</artifactId>
-					<version>${mavenInvokerPluginVersion}</version>
-				</plugin>
-				<plugin>
-					<groupId>com.google.code.sortpom</groupId>
-					<artifactId>maven-sortpom-plugin</artifactId>
-					<version>2.2</version>
-				</plugin>
-				<plugin>
-					<artifactId>maven-plugin-plugin</artifactId>
-					<version>3.2</version>
-				</plugin>
-				<plugin>
-					<groupId>com.github.github</groupId>
-					<artifactId>site-maven-plugin</artifactId>
-					<version>0.8</version>
-				</plugin>
-				<plugin>
 					<artifactId>maven-docck-plugin</artifactId>
 					<version>1.0</version>
 				</plugin>
 				<plugin>
 					<artifactId>maven-release-plugin</artifactId>
 					<version>2.4.1</version>
-				</plugin>
-				<plugin>
-					<artifactId>maven-site-plugin</artifactId>
-					<version>3.3</version>
-					<dependencies>
-						<dependency>
-							<groupId>org.apache.maven.doxia</groupId>
-							<artifactId>doxia-module-markdown</artifactId>
-							<version>1.4</version>
-						</dependency>
-					</dependencies>
-				</plugin>
-				<plugin>
-					<groupId>org.codehaus.mojo</groupId>
-					<artifactId>license-maven-plugin</artifactId>
-					<version>1.5</version>
 				</plugin>
 				<plugin>
 					<groupId>com.github.genthaler</groupId>
@@ -104,10 +64,6 @@
 					</execution>
 				</executions>
 				<configuration>
-					<licenseName>apache_v2</licenseName>
-					<canUpdateCopyright>true</canUpdateCopyright>
-					<canUpdateDescription>true</canUpdateDescription>
-					<organizationName>Günther Enthaler</organizationName>
 					<extraExtensions>
 						<md>xml</md>
 						<vm>xml</vm>
@@ -193,69 +149,13 @@
 					<skipDeploy>true</skipDeploy>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>com.github.github</groupId>
-				<artifactId>site-maven-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>site</id>
-						<phase>site-deploy</phase>
-						<goals>
-							<goal>site</goal>
-						</goals>
-						<configuration>
-							<message>Creating site for ${project.version}</message>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
 		</plugins>
 	</build>
 	<reporting>
 		<plugins>
 			<plugin>
-				<artifactId>maven-project-info-reports-plugin</artifactId>
-				<version>2.7</version>
-			</plugin>
-			<plugin>
 				<artifactId>maven-invoker-plugin</artifactId>
-				<version>${mavenInvokerPluginVersion}</version>
-			</plugin>
-			<plugin>
-				<artifactId>maven-changes-plugin</artifactId>
-				<version>2.9</version>
-				<reportSets>
-					<reportSet>
-						<reports>
-							<report>github-report</report>
-						</reports>
-					</reportSet>
-				</reportSets>
-				<configuration>
-					<onlyMilestoneIssues>false</onlyMilestoneIssues>
-					<onlyCurrentVersion>false</onlyCurrentVersion>
-					<includeOpenIssues>true</includeOpenIssues>
-					<columnNames>Type,Key,Summary,Assignee,Status,Fix Version</columnNames>
-					<sortColumnNames>Type,Key</sortColumnNames>
-				</configuration>
-			</plugin>
-			<plugin>
-				<artifactId>maven-changelog-plugin</artifactId>
-				<version>2.2</version>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>versions-maven-plugin</artifactId>
-				<version>2.1</version>
-				<reportSets>
-					<reportSet>
-						<reports>
-							<report>dependency-updates-report</report>
-							<report>plugin-updates-report</report>
-							<report>property-updates-report</report>
-						</reports>
-					</reportSet>
-				</reportSets>
+				<version>${maven-invoker-plugin.version}</version>
 			</plugin>
 		</plugins>
 	</reporting>
