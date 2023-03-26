@@ -9,3 +9,4 @@ release.properties
 .c9revisions
 *.releaseBackup
 /ant-maven-plugin-archetype.iml
+.DS_Store
